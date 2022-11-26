@@ -16,11 +16,18 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div>
+            <textarea name="base64text" id="base64text">
+                
+            </textarea>
+        </div>
+        <div>
+            <button type="submit" onclick="convertBase64ToPNG()">Convert to PNG</button>
+        </div>
+        <div id="imageOut">
+        </div>
 
-        <textarea name="base64text" id="base64text"></textarea>
-        <button type="submit">Convert to PNG</button>
-        <img src="" alt="">
-        
         <script src="main.js" async defer></script>
+        
     </body>
 </html>
