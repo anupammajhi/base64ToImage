@@ -1,0 +1,28 @@
+.main {
+    min-height: calc(100vh - 70px);
+}
+
+#imageOut img {
+    max-width: 100%;
+}
+
+#base64textdiv>label {
+    font-size: 20px;
+}
+
+#base64text {
+    font-size: 14px;
+    height: 15rem !important;
+    overflow-y: scroll;
+    margin-top: 1rem;
+}
+
+.hiddendiv {
+    display: none;
+    /* To disable materialize css autoresize of textarea since the height has been fixed for the text area */
+}
+
+#canvas {
+    height: 0;
+    width: 0;
+}

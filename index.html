@@ -4,28 +4,87 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Base64 to PNG | Anupam Majhi</title>
-        <meta name="description" content="Convert images encoded in Base64 to PNG">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div>
-            <textarea name="base64text" id="base64text"></textarea>
-        </div>
-        <div>
-            <button type="submit" onclick="convertBase64ToPNG()">Convert to PNG</button>
-        </div>
-        <div id="imageOut">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Base64 to PNG | Anupam Majhi</title>
+    <meta name="description" content="Convert images encoded in Base64 to PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- Compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->      
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <div class="row center" id="mainheader">
+                            <h3 class="header center blue-text">Base64 to Image Converter</h3>
+                        </div>
+
+                        <!-- <div class="row center">
+                            <h6 class="header center blue-grey-text">Supports PNG, JPEG, GIF, WEBP</h6>
+                        </div> -->
+
+                        <div class="input-field" id="base64textdiv">
+                            <textarea name="base64text" id="base64text" class="materialize-textarea"
+                                placeholder="Enter base64 text here .."></textarea>
+                            <label for="base64text">Base64 Text</label>
+                        </div>
+                        <div>
+                            <a class="waves-effect waves-light btn-large" onclick="convertBase64ToImage()"><i
+                                    class="material-icons right">image</i>Convert</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col s12 m12 l12 xl12">
+                        <div id="imageOut">
+                            <h4 class="materialize-red-text" style="margin-top: 100px;">Image Preview</h4>
+                            <i class="material-icons center materialize-red-text" style="font-size: 50px;">image</i>
+                        </div>
+
+                        <a id="downloadbtn" class="waves-effect waves-light btn-small" href=""><i
+                                class="material-icons right">download</i>Download Image</a>
+
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
-        <script src="main.js" async defer></script>
-        
-    </body>
+    </div>
+    <footer class="page-footer blue">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 Copyright Anupam Majhi
+                <a class="grey-text text-lighten-4 right" href="https://anupamm.com">AnupamM.com</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js" async defer></script>
+    <script src="css/materialize.min.css"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
 </html>
