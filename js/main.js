@@ -9,7 +9,9 @@ function convertBase64ToImage(){
     let mimeType = ""
     const dtaturiPreText = "data:image";
 
-    clearOutDiv();
+    if(textareaValue){
+        clearOutDiv();
+    }
 
     if(textareaValue.trim() == ""){
         return
