@@ -28,8 +28,10 @@ function convertBase64ToImage(){
     image.setAttribute('id', "art");
     image.src = img_datauri
 
-    clearOutDiv();
-
+    if(textareaValue){
+        clearOutDiv();
+    }
+    
     document.getElementById("imageOut").appendChild(image);
     document.getElementById("downloadbtn").setAttribute("href", img_datauri);
     document.getElementById("downloadbtn").setAttribute("download", "am_b64toimg." + mimeType.split("/")[1]);
